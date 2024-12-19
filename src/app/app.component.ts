@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CharactersService } from './characters-service/characters.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  template: `<router-outlet />`,
+  templateUrl: './app.component.html',
   styles: `
     :host {
       max-width: 1280px;
@@ -15,4 +16,10 @@ import { RouterOutlet } from '@angular/router';
     }
   `,
 })
-export class AppComponent {}
+export class AppComponent {
+  service = inject(CharactersService);
+
+  ngOnInit() {
+    this.service.loadCharacters();
+  }
+}
