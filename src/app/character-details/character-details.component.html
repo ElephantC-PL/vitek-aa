@@ -1,13 +1,13 @@
 @if(character){
-    <div class="container">        
-        <div class="col-md-4">
-            <img src="{{character.image}}" alt="{{character.name}}" class="img-fluid">
-        </div>
-        <div class="col-md-8">
-            <h1>{{character.name}}</h1>
+    <mat-card class="card" appearance="outlined">
+        <mat-card-header>          
+          <mat-card-title><h2>{{character.name}}</h2></mat-card-title>         
+        </mat-card-header>
+        <img mat-card-image src="{{character.image}}" alt="{{character.name}}" >
+        <mat-card-content>       
             <p><strong>Status:</strong> {{character.status}}</p>
             <p><strong>Species:</strong> {{character.species}}</p>
-        </div>
-    </div>            
+        </mat-card-content>  
+      </mat-card>       
 }
-<a [routerLink]="['/']" class="btn btn-primary">Back</a>
+<a [routerLink]="['/']" mat-raised-button>Back</a>

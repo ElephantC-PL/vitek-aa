@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
-import { Character, DefaultService } from '../../api';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CharactersService } from '../characters-service/characters.service';
-import { signal, computed } from '@angular/core';
+import { computed } from '@angular/core';
+import {MatListModule} from '@angular/material/list';
 
 @Component({
   selector: 'app-character-list',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, MatListModule],
   templateUrl: './character-list.component.html',
   styleUrl: './character-list.component.css'
 })

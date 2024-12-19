@@ -11,8 +11,7 @@ import { CharactersService } from './characters-service/characters.service';
     :host {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 2rem;
-      text-align: center;
+      padding: 2rem;      
     }
   `,
 })
