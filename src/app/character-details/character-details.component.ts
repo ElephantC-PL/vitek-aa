@@ -9,7 +9,7 @@ import {MatCardModule} from '@angular/material/card';
   selector: 'app-character-details',
   imports: [RouterLink, MatButtonModule, MatCardModule],
   templateUrl: './character-details.component.html',
-  styleUrl: './character-details.component.css'
+  styleUrl: './character-details.component.scss'
 })
 export class CharacterDetailsComponent implements OnInit{
   @Input() characterId: number | null = null;

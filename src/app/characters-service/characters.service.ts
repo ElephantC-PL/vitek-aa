@@ -10,7 +10,7 @@ export class CharactersService {
 
   loadCharacters():void {
     this.service.getCharacters().subscribe(response => {
-      if(response.results) {console.log('load', response.results); this.characters.set(response.results)}     
+      if(response.results) { this.characters.set(response.results)}     
     });
   }
   

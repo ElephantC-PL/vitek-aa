@@ -9,7 +9,7 @@ import {MatListModule} from '@angular/material/list';
   selector: 'app-character-list',
   imports: [CommonModule, RouterLink, MatListModule],
   templateUrl: './character-list.component.html',
-  styleUrl: './character-list.component.css'
+  styleUrl: './character-list.component.scss'
 })
 export class CharacterListComponent {
   service = inject(CharactersService);
